@@ -172,6 +172,9 @@ class SheetzCard extends LitElement {
         <button>Fries</button>
         <button>Shake</button>
       </div>
+      <div class="detailsBtn">
+      <button class="toggle-details">Details</button>
+  </div>
       <div class="images">
         <img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Hot_dog_with_mustard.png" alt="A beautiful landscape">
         <img src="https://media.istockphoto.com/id/496094410/photo/potatoes-fries-in-a-red-carton-box-isolated-fast-food.jpg?s=612x612&w=0&k=20&c=d7WnO6AW0C3A-xMSBa3Yb5rmSNelyY-jmxhW2efZq2Q=">
@@ -186,7 +189,6 @@ class SheetzCard extends LitElement {
     </div>
   </div>
   <div class="buttons">
-  <button id="toggle-details">Details</button>
     <button id="duper">Button for duplication</button>
     <button id="background">Change Background</button>
     <button id="title">Change Title</button>
