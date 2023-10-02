@@ -173,10 +173,8 @@ class SheetzCard extends LitElement {
         <button>Shake</button>
       </div>
       <div class="detailsBtn">
-  <details>
-    <summary class="toggle-details">Details</summary>
-  </details>
-</div>
+      <button class="toggle-details">Details</button>
+  </div>
       <div class="images">
         <img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Hot_dog_with_mustard.png" alt="A beautiful landscape">
         <img src="https://media.istockphoto.com/id/496094410/photo/potatoes-fries-in-a-red-carton-box-isolated-fast-food.jpg?s=612x612&w=0&k=20&c=d7WnO6AW0C3A-xMSBa3Yb5rmSNelyY-jmxhW2efZq2Q=">
@@ -198,14 +196,15 @@ class SheetzCard extends LitElement {
        
       
       <script> 
+        /*
         //Chat GPTS idea
         document.querySelector('sheetz-card').shadowRoot.querySelector('.toggle-details').addEventListener('click', (e) => {
   const details = this.shadowRoot.querySelector('.detailsBtn details'); // Change this selector based on your actual HTML structure
   if (details) {
     details.toggleAttribute('open');
   }
-});
-        /*
+});*/
+        
       // JavaScript to toggle visibility of the paragraph descriptions
 document.querySelector('.toggle-details').addEventListener('click', (e) => {
  // const details = document.querySelector('sheetz-card').shadowRoot.querySelector('.toggle-details');
@@ -215,7 +214,7 @@ const paragraphsSections = document.querySelector('sheetz-card').shadowRoot.quer
   toggleDetailsButtons.forEach((button, index) => {
     paragraphsSections[index].classList.toggle('hidden');
 });
-})*/
+})
 /*
 toggleDetailsButtons.forEach((button, index) => {#
 const toggleDetailsButtons = document.querySelector('sheetz-card').shadowRoot.querySelectorAll('.toggle-details');
