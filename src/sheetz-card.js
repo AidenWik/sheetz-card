@@ -179,8 +179,7 @@ class SheetzCard extends LitElement {
         <img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Hot_dog_with_mustard.png" alt="A beautiful landscape">
         <img src="https://media.istockphoto.com/id/496094410/photo/potatoes-fries-in-a-red-carton-box-isolated-fast-food.jpg?s=612x612&w=0&k=20&c=d7WnO6AW0C3A-xMSBa3Yb5rmSNelyY-jmxhW2efZq2Q=">
         <img src="https://gofericecream.com/wp-content/uploads/2021/06/shake-.png">
-      </div>
-        <button class="toggle-details">Details</button>
+  </div>
       <div class="paragraphs">
         <p1>$1.99 <br>A food consisting of a grilled or steamed sausage served in the slit of a partially sliced bun. </p1>
         <p2>$0.99 <br>Side dish or snack typically made from deep-fried potatoes that have been cut into various shapes, especially thin strips. </p2>
