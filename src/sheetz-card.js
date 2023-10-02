@@ -227,7 +227,7 @@ const paragraphsSections = document.querySelector('sheetz-card').shadowRoot.quer
 // JavaScript for cloning cards
 document.querySelector('sheetz-card').shadowRoot.querySelector('#duper').addEventListener('click', (e) => {
   const cardContainer = document.querySelector('sheetz-card').shadowRoot.querySelector('.card-container');
-  const cardWrapperClone = document.querySelector('sheetz-card').shadowRoot.querySelector('.card-wrapper').cloneNode();
+  const cardWrapperClone = document.querySelector('sheetz-card').shadowRoot.querySelector('.card-wrapper').cloneNode(true);
 
   // Add unique classes to the cloned elements
   cardWrapperClone.classList.add('cloned-card');
