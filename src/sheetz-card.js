@@ -193,7 +193,7 @@ class SheetzCard extends LitElement {
     <button id="title">Change Title</button>
     <button id="deleteLastCard">Delete Last Card</button>
   </div>
-       
+  <sheetz-card></sheetz-card>
       
       <script> 
         /*
