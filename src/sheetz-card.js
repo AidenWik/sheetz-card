@@ -196,6 +196,14 @@ class SheetzCard extends LitElement {
        
       
       <script> 
+        //Chat GPTS idea
+        document.querySelector('sheetz-card').shadowRoot.querySelector('.toggle-details').addEventListener('click', (e) => {
+  const details = this.shadowRoot.querySelector('.detailsBtn details'); // Change this selector based on your actual HTML structure
+  if (details) {
+    details.toggleAttribute('open');
+  }
+});
+        /*
       // JavaScript to toggle visibility of the paragraph descriptions
 document.querySelector('.toggle-details').addEventListener('click', (e) => {
  // const details = document.querySelector('sheetz-card').shadowRoot.querySelector('.toggle-details');
@@ -205,7 +213,7 @@ const paragraphsSections = document.querySelector('sheetz-card').shadowRoot.quer
   toggleDetailsButtons.forEach((button, index) => {
     paragraphsSections[index].classList.toggle('hidden');
 });
-})
+})*/
 /*
 toggleDetailsButtons.forEach((button, index) => {#
 const toggleDetailsButtons = document.querySelector('sheetz-card').shadowRoot.querySelectorAll('.toggle-details');
