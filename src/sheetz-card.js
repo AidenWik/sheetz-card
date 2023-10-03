@@ -152,16 +152,16 @@ class SheetzCard extends LitElement {
   }*/
   detailsToggle(){
     // JavaScript to toggle visibility of the paragraph descriptions
-    document.querySelector('.toggle-details').addEventListener('click', (e) => {
-      // const details = document.querySelector('sheetz-card').shadowRoot.querySelector('.toggle-details');
-      const toggleDetailsButtons = document.querySelector('sheetz-card').shadowRoot.querySelector('.toggle-details');
-      const paragraphsSections = document.querySelector('sheetz-card').shadowRoot.querySelector('.paragraphs');
-      console.log(details);
-      toggleDetailsButtons.forEach((button, index) => {
-        paragraphsSections[index].classList.toggle('hidden');
-      });
-    })
-  }
+document.querySelector('.toggle-details').addEventListener('click', (e) => {
+// const details = document.querySelector('sheetz-card').shadowRoot.querySelector('.toggle-details');
+const toggleDetailsButtons = document.querySelector('sheetz-card').shadowRoot.querySelector('.toggle-details');
+const paragraphsSections = document.querySelector('sheetz-card').shadowRoot.querySelector('.paragraphs');
+console.log(details);
+toggleDetailsButtons.forEach((button, index) => {
+  paragraphsSections[index].classList.toggle('hidden');
+});
+})
+}
   deleteCard(){
    
   // Code for deleting the last card
