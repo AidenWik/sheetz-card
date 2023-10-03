@@ -340,12 +340,16 @@ cardWrapper.classList.toggle('alt-bg2');
 });
 */
 changeTitle(){
+  /*
 document.querySelector('sheetz-card').shadowRoot.querySelector('#title').addEventListener('click', (e) => {
 const headings = document.querySelector('sheetz-card').shadowRoot.querySelectorAll('.sheetzLbl'); // Corrected class name
 headings.forEach((heading) => {
 heading.textContent = "something else";
 });
-});
+});*/
+const cardTitle = this.shadowRoot.querySelector('#title');
+cardTitle.textContent = 'something else';
+
 }
 changeBackground(){
 document.querySelector('sheetz-card').shadowRoot.querySelector('#background').addEventListener('click', (e) => {
