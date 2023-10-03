@@ -347,7 +347,7 @@ headings.forEach((heading) => {
 heading.textContent = "something else";
 });
 });*/
-const cardTitle = this.shadowRoot.querySelector('#title');
+const cardTitle = document.querySelector('sheetz-card').shadowRoot.querySelector('#title');
 cardTitle.textContent = 'something else';
 
 }
