@@ -157,7 +157,7 @@ class SheetzCard extends LitElement {
     const clonedToggleDetailsButton = cardWrapperClone.querySelector('.detailsBtn');
     const clonedParagraphsSection = cardWrapperClone.querySelector('.paragraphs');
   
-      clonedParagraphsSection.classList.toggle('hidden');
+     // clonedParagraphsSection.classList.toggle('hidden');
   }
   deleteCard(){
     // Code for deleting the last card
@@ -187,10 +187,10 @@ class SheetzCard extends LitElement {
     // JavaScript to toggle visibility of the paragraph descriptions
 // const details = document.querySelector('sheetz-card').shadowRoot.querySelector('.toggle-details');
 const toggleDetailsButtons = document.querySelector('sheetz-card').shadowRoot.querySelectorAll('.detailsBtn');
-const paragraphsSections = document.querySelector('sheetz-card').shadowRoot.querySelectorAll('.paragraphs');
-  //toggleDetailsButtons.forEach((button, index) => {
-    //paragraphsSections[index].classList.toggle('hidden');
-  //});
+const paragraphsSections = document.querySelector('sheetz-card').shadowRoot.querySelector('.paragraphs');
+  toggleDetailsButtons.forEach((button, index) => {
+    paragraphsSections[index].classList.toggle('hidden');
+  });
 }
   render() {
     return html`
