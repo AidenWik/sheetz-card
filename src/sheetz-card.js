@@ -146,12 +146,12 @@ class SheetzCard extends LitElement {
   
     // Add unique classes to the cloned elements
     cardWrapperClone.classList.add('cloned-card');
-    cardWrapperClone.querySelector('.toggle-details').textContent = 'Details';
+    cardWrapperClone.querySelector('.detailsBtn').textContent = 'Details';
   
     cardContainer.appendChild(cardWrapperClone);
   
     // Set up event listeners for the cloned button
-    const clonedToggleDetailsButton = cardWrapperClone.querySelector('.toggle-details');
+    const clonedToggleDetailsButton = cardWrapperClone.querySelector('.detailsBtn');
     const clonedParagraphsSection = cardWrapperClone.querySelector('.paragraphs');
   
       clonedParagraphsSection.classList.toggle('hidden');
@@ -222,7 +222,7 @@ toggleDetailsButtons.forEach((button, index) => {
                   <img src="https://gofericecream.com/wp-content/uploads/2021/06/shake-.png">
                 </div>
                   <div class="detailsBtn">
-                    <button class="toggle-details">Details</button>
+                    <button class="detailsBtn" @click="${this.detailsToggle}">Details</button>
                   </div>
                     <div class="paragraphs">
                       <p>$1.99 <br>A food consisting of a grilled or steamed sausage served in the slit of a partially sliced bun. </p>
@@ -255,9 +255,9 @@ toggleDetailsButtons.forEach((button, index) => {
 });*/
      detailsToggle(){
       // JavaScript to toggle visibility of the paragraph descriptions
-document.querySelector('.toggle-details').addEventListener('click', (e) => {
+document.querySelector('.detailsBtn').addEventListener('click', (e) => {
  // const details = document.querySelector('sheetz-card').shadowRoot.querySelector('.toggle-details');
-  const toggleDetailsButtons = document.querySelector('sheetz-card').shadowRoot.querySelector('.toggle-details');
+  const toggleDetailsButtons = document.querySelector('sheetz-card').shadowRoot.querySelector('.detailsBtn');
 const paragraphsSections = document.querySelector('sheetz-card').shadowRoot.querySelector('.paragraphs');
   console.log(details);
   toggleDetailsButtons.forEach((button, index) => {
