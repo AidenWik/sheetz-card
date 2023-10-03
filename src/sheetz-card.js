@@ -243,7 +243,7 @@ class SheetzCard extends LitElement {
     <button id="duper" @click="${this.dupeCard}">Button for duplication</button>
   </div>
   <div class="background">
-    <button id="background" @click="${this.changeBackground}>Change Background</button>
+    <button id="background">Change Background</button>
   </div>
   <div class="title">
     <button id="title" @click="${this.changeTitle}">Change Title</button>
