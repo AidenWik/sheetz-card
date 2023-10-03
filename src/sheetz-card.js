@@ -179,13 +179,13 @@ class SheetzCard extends LitElement {
           </div>
         </div>
   <div class="duper">
-    <button id="duper" @click="$(this.dupeCard)">Button for duplication</button>
+    <button id="duper" @click="${this.dupeCard}">Button for duplication</button>
   </div>
   <div class="background">
     <button id="background">Change Background</button>
   </div>
   <div class="title">
-    <button id="title" @click="$(this.changeTitle)">Change Title</button>
+    <button id="title" @click="${this.changeTitle}">Change Title</button>
   </div>
   <div class="delete">
     <button id="deleteLastCard">Delete Last Card</button>
