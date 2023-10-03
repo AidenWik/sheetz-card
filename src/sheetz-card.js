@@ -186,7 +186,7 @@ class SheetzCard extends LitElement {
   detailsToggle(){
     // JavaScript to toggle visibility of the paragraph descriptions
 // const details = document.querySelector('sheetz-card').shadowRoot.querySelector('.toggle-details');
-const toggleDetailsButtons = document.querySelector('sheetz-card').shadowRoot.querySelectorAll('#detailsBtn');
+const toggleDetailsButtons = document.querySelector('sheetz-card').shadowRoot.querySelectorAll('.card-wraper');
 const paragraphsSections = document.querySelector('sheetz-card').shadowRoot.querySelectorAll('.paragraphs');
 console.log(toggleDetailsButtons);
 console.log(paragraphsSections);
