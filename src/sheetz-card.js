@@ -176,9 +176,9 @@ class SheetzCard extends LitElement {
   changeBackground(){
       const cardWrappers = document.querySelector('sheetz-card').shadowRoot.querySelector('.card-wrapper');
       // loop to change each existing iteration
-      cardWrappers.forEach((cardWrapper) => {
+
         cardWrapper.classList.toggle('alt-bg');
-      });
+
 
   }
   /*detailsToggle(){
