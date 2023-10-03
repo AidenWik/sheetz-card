@@ -140,6 +140,18 @@ class SheetzCard extends LitElement {
     super();
     this.header = 'My app';
   }
+  detailsToggle(){
+    // JavaScript to toggle visibility of the paragraph descriptions
+    document.querySelector('.toggle-details').addEventListener('click', (e) => {
+      // const details = document.querySelector('sheetz-card').shadowRoot.querySelector('.toggle-details');
+      const toggleDetailsButtons = document.querySelector('sheetz-card').shadowRoot.querySelector('.toggle-details');
+      const paragraphsSections = document.querySelector('sheetz-card').shadowRoot.querySelector('.paragraphs');
+      console.log(details);
+      toggleDetailsButtons.forEach((button, index) => {
+        paragraphsSections[index].classList.toggle('hidden');
+      });
+    })
+  }
   deleteCard(){
     document.querySelector('sheetz-card').shadowRoot.querySelector('#deleteLastCard').addEventListener('click', (e) => {
   // Code for deleting the last card
@@ -212,7 +224,7 @@ class SheetzCard extends LitElement {
                   <img src="https://gofericecream.com/wp-content/uploads/2021/06/shake-.png">
                 </div>
                   <div class="detailsBtn">
-                    <button class="toggle-details">Details</button>
+                    <button class="toggle-details" @click="${this.detailsToggle}">Details</button>
                   </div>
                     <div class="paragraphs">
                       <p>$1.99 <br>A food consisting of a grilled or steamed sausage served in the slit of a partially sliced bun. </p>
@@ -243,7 +255,7 @@ class SheetzCard extends LitElement {
     details.toggleAttribute('open');
   }
 });*/
-     
+     detailsToggle(){
       // JavaScript to toggle visibility of the paragraph descriptions
 document.querySelector('.toggle-details').addEventListener('click', (e) => {
  // const details = document.querySelector('sheetz-card').shadowRoot.querySelector('.toggle-details');
@@ -254,7 +266,7 @@ const paragraphsSections = document.querySelector('sheetz-card').shadowRoot.quer
     paragraphsSections[index].classList.toggle('hidden');
 });
 })
-  
+}
 /*
 toggleDetailsButtons.forEach((button, index) => {#
 const toggleDetailsButtons = document.querySelector('sheetz-card').shadowRoot.querySelectorAll('.toggle-details');
