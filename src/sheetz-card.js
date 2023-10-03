@@ -160,7 +160,7 @@ class SheetzCard extends LitElement {
 }
 */ 
     const cardContainer = document.querySelector('sheetz-card').shadowRoot.querySelector('.card-container');
-    const cardWrapperClone = cardContainer[0].cloneNode(true);
+    const cardWrapperClone = document.querySelector('sheetz-card').shadowRoot.querySelector('.card-container').cloneNode(true);
   
     // Add unique classes to the cloned elements
     
