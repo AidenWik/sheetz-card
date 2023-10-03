@@ -229,7 +229,7 @@ toggleDetailsButtons.forEach((button, index) => {
   <div class="duper">
     <button id="duper" @click="${this.dupeCard}">Button for duplication</button>
   </div>
-  <div class="background">
+  <div class="background" @click="${this.changeBackground}">
     <button id="background">Change Background</button>
   </div>
   <div class="title">
