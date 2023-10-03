@@ -145,18 +145,35 @@ class SheetzCard extends LitElement {
     this.header = 'My app';
   }
   dupeCard(){
+    //BTOPROS DUPE CARD
+    /*duplicateCard() {
+  const cards = this.shadowRoot.querySelectorAll('.container');
+  const clone = cards[0].cloneNode(true);
+  clone.querySelector('.toggle-button').classList.remove('hidden');
+  this.shadowRoot.querySelector('.wrapper').appendChild(clone);
+
+  const toggleDescriptionButton = clone.querySelector('.toggle-button');
+  const cardDescription = clone.querySelector('.description');
+  toggleDescriptionButton.addEventListener('click', () => {
+    cardDescription.classList.toggle('hidden');
+  });
+}
+*/ 
     const cardContainer = document.querySelector('sheetz-card').shadowRoot.querySelector('.card-container');
-    const cardWrapperClone = document.querySelector('sheetz-card').shadowRoot.querySelector('.card-wrapper').cloneNode(true);
+    const lone = cardContainer[0].cloneNode(true);
   
     // Add unique classes to the cloned elements
     
-    cardWrapperClone.classList.add('cloned-card');
-  
-    cardContainer.appendChild(cardWrapperClone);
+    clone.classList.add('cloned-card');
+
+    this.shadowRoot.querySelector('.card-wrapper').appendChild(clone);
+    cardContainer.appendChild(clone);
     // Set up event listeners for the cloned button
-    const clonedToggleDetailsButton = cardWrapperClone.querySelector('.detailsBtn');
-    const clonedParagraphsSection = cardWrapperClone.querySelector('.paragraphs');
-  
+    const clonedToggleDetailsButton = clone.querySelector('.detailsBtn');
+    const clonedParagraphsSection = clone.querySelector('.paragraphs');
+    clonedToggleDetailsButton.addEventListener('click', () => {
+      clonedParagraphsSection.classList.toggle('hidden');
+    });
      //clonedParagraphsSection.classList.toggle('hidden');
   }
   deleteCard(){
