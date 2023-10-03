@@ -198,7 +198,7 @@ src="https://gofericecream.com/wp-content/uploads/2021/06/shake-.png">
     <button id="background">Change Background</button>
   </div>
   <div class ="title">
-    <button id="title" @click="$(this.toggleDetails)">Change Title</button>
+    <button id="title" @click="$(this.changeTitle)">Change Title</button>
   </div>
     <div class="delete">
         <button id="deleteLastCard">Delete Last Card</button>
@@ -213,7 +213,7 @@ src="https://gofericecream.com/wp-content/uploads/2021/06/shake-.png">
     details.toggleAttribute('open');
   }
 });*/
-  toggleDetails(){      
+     
       // JavaScript to toggle visibility of the paragraph descriptions
 document.querySelector('.toggle-details').addEventListener('click', (e) => {
  // const details = document.querySelector('sheetz-card').shadowRoot.querySelector('.toggle-details');
@@ -224,7 +224,7 @@ const paragraphsSections = document.querySelector('sheetz-card').shadowRoot.quer
     paragraphsSections[index].classList.toggle('hidden');
 });
 })
-  }
+  
 /*
 toggleDetailsButtons.forEach((button, index) => {#
 const toggleDetailsButtons = document.querySelector('sheetz-card').shadowRoot.querySelectorAll('.toggle-details');
@@ -280,12 +280,14 @@ const cardWrapper = document.querySelector('sheetz-card').shadowRoot.querySelect
 cardWrapper.classList.toggle('alt-bg2');
 });
 */
+changeTitle(){
 document.querySelector('sheetz-card').shadowRoot.querySelector('#title').addEventListener('click', (e) => {
 const headings = document.querySelector('sheetz-card').shadowRoot.querySelectorAll('.sheetzLbl'); // Corrected class name
 headings.forEach((heading) => {
 heading.textContent = "something else";
 });
 });
+}
 //Chat GPT fix 
 document.querySelector('sheetz-card').shadowRoot.querySelector('.card-wrapper').addEventListener('mouseleave', (e) => {
   const cardWrapper = e.target; // Use the event target
