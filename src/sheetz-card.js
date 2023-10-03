@@ -9,7 +9,7 @@ class SheetzCard extends LitElement {
 
   static styles = css` 
   .card-wrapper {
-  display:inline-block;
+  display: inline-block;
   max-width: 400px; /* Set the maximum width of the card */
   width: 100%; /* Make the card responsive within the parent container */
   padding: 20px; /* Add padding for spacing */
@@ -28,82 +28,73 @@ class SheetzCard extends LitElement {
 /* Media query to scale the card on screens smaller than 500px */
 @media (max-width: 500px) {
   .card-wrapper {
-      max-width: 100%; /* Expand the card to the full width of the viewport */
-      padding: 10px; /* Adjust padding for smaller screens if needed */
+    max-width: 100%; /* Expand the card to the full width of the viewport */
+    padding: 10px; /* Adjust padding for smaller screens if needed */
   }
 }
 
-.Sheetz label{ 
-
-display: flex;
+.Sheetz label {
+  display: flex;
   justify-content: center;
   align-items: center;
-  height: 10vh; 
-  margin: 0; 
-font-size: 50px;
-color: white;
-background: red;
+  height: 10vh;
+  margin: 0;
+  font-size: 50px;
+  color: white;
+  background: red;
 }
-.directions label{
-display: flex;
+.directions label {
+  display: flex;
   justify-content: center;
   align-items: center;
-  height: 10vh; 
+  height: 10vh;
   margin: 0;
-color: Black;
+  color: Black;
 }
-.Favorites label{
-display: flex;
+.Favorites label {
+  display: flex;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
   margin: 0;
-font-size: 30px;
-color: white;
-background: black;
+  font-size: 30px;
+  color: white;
+  background: black;
 }
 
 .btn-wrapper {
-display: flex;
+  display: flex;
   justify-content: center;
-  align-items: center; 
-margin: 24px auto;
+  align-items: center;
+  margin: 24px auto;
 }
 .btn-wrapper button {
-font-size: 40px;
-color: blue;
-background-color: white;
+  font-size: 40px;
+  color: blue;
+  background-color: white;
 }
 .btn-wrapper button:hover {
-color: white;
-background-color: blue;
+  color: white;
+  background-color: blue;
 }
 .images {
-display: flex;
-justify-content: center;
-align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .images img {
-height: auto; 
-max-width: 30%; 
+  height: auto;
+  max-width: 30%;
 }
 
 .paragraphs {
-display: flex;
+  display: flex;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
 }
-.paragraphs p1 {
-/* Styles for the first paragraph */
-padding-right: 20px;
-padding-bottom: 20px;
-}
-.paragraphs p2 {
-padding-right: 20px;
-padding-bottom: 20px;
-}
-.paragraphs p3 {
-padding-right: 20px;
-padding-bottom: 20px;
+.paragraphs p {
+  /* Styles for the first paragraph */
+  padding-right: 20px;
+  padding-bottom: 20px;
 }
 .card-wrapper .detailsBtn button {
   position: absolute;
@@ -115,27 +106,25 @@ padding-bottom: 20px;
   cursor: pointer;
   color: white;
 }
-
 .detailsBtn button:hover {
   color: blue;
   background-color: white;
 }
 
-.duper button{
-color: white;
-background-color: blue;
+.duper button {
+  color: white;
+  background-color: blue;
 }
-.duper button:focus  {
-color: blue;
+.duper button:focus {
+  color: blue;
   background-color: white;
 }
 /* Show the details button between 500px and 800px */
 @media (max-width: 800px) {
   .detailsBtn button {
-      display: none;
+    display: none;
   }
 }
-
 .card-wrapper.alt-bg {
   background-color: lightblue;
 }
@@ -143,8 +132,8 @@ color: blue;
   background-color: lightgreen;
 }
 .hidden {
-          display: none;
-      }
+  display: none;
+}
   `;
 
   constructor() {
@@ -155,54 +144,52 @@ color: blue;
   render() {
     return html`
     <head>
-  <title>Homework IST 256 Sheetz</title>
-</head>
-<body>
-<div class="card-container">
-  <div class="card-wrapper">
-  <div class="Sheetz">
-    <label class="sheetzLbl">Sheetz</label>
+      <title>Homework IST 256 Sheetz</title>
+    </head>
+    <body>
+      <div class="card-container">
+        <div class="card-wrapper">
+        <div class="Sheetz">
+          <label class="sheetzLbl">Sheetz</label>
+        </div>
+          <div class="directions">
+            <label id="directionsLbl">Directions</label>
+          </div>
+            <div class="Favorites">
+              <label id="Favoriteslbl">Favorites</label>
+            </div>
+              <div class="btn-wrapper">
+                <button>Hotdog</button>
+                <button>Fries</button>
+                <button>Shake</button>
+              </div>
+                <div class="images">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Hot_dog_with_mustard.png" alt="A beautiful landscape">
+                  <img src="https://media.istockphoto.com/id/496094410/photo/potatoes-fries-in-a-red-carton-box-isolated-fast-food.jpg?s=612x612&w=0&k=20&c=d7WnO6AW0C3A-xMSBa3Yb5rmSNelyY-jmxhW2efZq2Q=">
+                  <img src="https://gofericecream.com/wp-content/uploads/2021/06/shake-.png">
+                </div>
+                  <div class="detailsBtn">
+                    <button class="toggle-details">Details</button>
+                  </div>
+                    <div class="paragraphs">
+                      <p>$1.99 <br>A food consisting of a grilled or steamed sausage served in the slit of a partially sliced bun. </p>
+                      <p>$0.99 <br>Side dish or snack typically made from deep-fried potatoes that have been cut into various shapes, especially thin strips. </p>
+                      <p>$5.99 <br> A sweet beverage made by blending milk, ice cream, and flavorings or sweeteners. </p>
+                    </div>
+          </div>
+        </div>
+  <div class="duper">
+    <button id="duper">Button for duplication</button>
   </div>
-<div class="directions">
-  <label id="directionsLbl">Directions</label>
-</div>
-<div class="Favorites">
-  <label id="Favoriteslbl">Favorites</label>
-  </div>
-<div class="btn-wrapper">
-  <button>Hotdog</button>
-  <button>Fries</button>
-  <button>Shake</button>
-</div>
-<div class="images">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Hot_dog_with_mustard.png" alt="A beautiful landscape">
-
-  <img src="https://media.istockphoto.com/id/496094410/photo/potatoes-fries-in-a-red-carton-box-isolated-fast-food.jpg?s=612x612&w=0&k=20&c=d7WnO6AW0C3A-xMSBa3Yb5rmSNelyY-jmxhW2efZq2Q=">
-  <img 
-src="https://gofericecream.com/wp-content/uploads/2021/06/shake-.png"> 
-</div>
- <div class="detailsBtn">
-        <button class="toggle-details">Details</button>
-    </div>
-<div class="paragraphs">
-  <p1>$1.99 <br>A food consisting of a grilled or steamed sausage served in the slit of a partially sliced bun.</p1>
-  <p2>$0.99 <br>Side dish or snack typically made from deep-fried potatoes that have been cut into various shapes, especially thin strips.</p2>
-  <p3>$5.99 <br> A sweet beverage made by blending milk, ice cream, and flavorings or sweeteners.</p3>
-  </div>
-  </div>
-  </div>
-  <div class ="duper">
-   <button id="duper">Button for duplication</button>
-    </div>   
-  <div class ="background">
+  <div class="background">
     <button id="background">Change Background</button>
   </div>
-  <div class ="title">
+  <div class="title">
     <button id="title" @click="$(this.changeTitle)">Change Title</button>
   </div>
-    <div class="delete">
-        <button id="deleteLastCard">Delete Last Card</button>
-    </div>
+  <div class="delete">
+    <button id="deleteLastCard">Delete Last Card</button>
+  </div>
 
       <script> 
         /*
