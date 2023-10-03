@@ -140,6 +140,38 @@ class SheetzCard extends LitElement {
     super();
     this.header = 'My app';
   }
+  dupeCard(){
+    const cardContainer = document.querySelector('sheetz-card').shadowRoot.querySelector('.card-container');
+    const cardWrapperClone = document.querySelector('sheetz-card').shadowRoot.querySelector('.card-wrapper').cloneNode(true);
+  
+    // Add unique classes to the cloned elements
+    cardWrapperClone.classList.add('cloned-card');
+    cardWrapperClone.querySelector('.toggle-details').textContent = 'Details';
+  
+    cardContainer.appendChild(cardWrapperClone);
+  
+    // Set up event listeners for the cloned button
+    const clonedToggleDetailsButton = cardWrapperClone.querySelector('.toggle-details');
+    const clonedParagraphsSection = cardWrapperClone.querySelector('.paragraphs');
+  
+      clonedParagraphsSection.classList.toggle('hidden');
+  }
+  deleteCard(){
+    // Code for deleting the last card
+    const cardContainer = document.querySelector('sheetz-card').shadowRoot.querySelector('.card-container');
+    const cardWrappers = document.querySelector('sheetz-card').shadowRoot.querySelectorAll('.card-wrapper');
+    // Check if there's at least one card to delete
+    if (cardWrappers.length > 1) {
+      const lastCard = cardWrappers[cardWrappers.length - 1];
+      cardContainer.removeChild(lastCard);
+    }
+    }
+    changeTitle(){
+        const headings = document.querySelector('sheetz-card').shadowRoot.querySelectorAll('.sheetzLbl'); // Corrected class name
+        headings.forEach((heading) => {
+        heading.textContent = "something else";
+        });
+    }
   /*
   changeBackground(){
     document.querySelector('sheetz-card').shadowRoot.querySelector('#background').addEventListener('click', (e) => {
@@ -150,7 +182,7 @@ class SheetzCard extends LitElement {
       });
     });
   }*/
-  detailsToggle(){
+  /*detailsToggle(){
     // JavaScript to toggle visibility of the paragraph descriptions
 document.querySelector('.toggle-details').addEventListener('click', (e) => {
 // const details = document.querySelector('sheetz-card').shadowRoot.querySelector('.toggle-details');
@@ -162,42 +194,6 @@ toggleDetailsButtons.forEach((button, index) => {
 });
 })
 }*/
-  deleteCard(){
-   
-  // Code for deleting the last card
-  const cardContainer = document.querySelector('sheetz-card').shadowRoot.querySelector('.card-container');
-  const cardWrappers = document.querySelector('sheetz-card').shadowRoot.querySelectorAll('.card-wrapper');
-  // Check if there's at least one card to delete
-  if (cardWrappers.length > 1) {
-    const lastCard = cardWrappers[cardWrappers.length - 1];
-    cardContainer.removeChild(lastCard);
-  }
-  }
-  changeTitle(){
-      const headings = document.querySelector('sheetz-card').shadowRoot.querySelectorAll('.sheetzLbl'); // Corrected class name
-      headings.forEach((heading) => {
-      heading.textContent = "something else";
-      });
-    }
-    
-  dupeCard(){
-      const cardContainer = document.querySelector('sheetz-card').shadowRoot.querySelector('.card-container');
-      const cardWrapperClone = document.querySelector('sheetz-card').shadowRoot.querySelector('.card-wrapper').cloneNode(true);
-    
-      // Add unique classes to the cloned elements
-      cardWrapperClone.classList.add('cloned-card');
-      cardWrapperClone.querySelector('.toggle-details').textContent = 'Details';
-    
-      cardContainer.appendChild(cardWrapperClone);
-    
-      // Set up event listeners for the cloned button
-      const clonedToggleDetailsButton = cardWrapperClone.querySelector('.toggle-details');
-      const clonedParagraphsSection = cardWrapperClone.querySelector('.paragraphs');
-    
-        clonedParagraphsSection.classList.toggle('hidden');
-    }
-
-
   render() {
     return html`
     <head>
