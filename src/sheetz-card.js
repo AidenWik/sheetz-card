@@ -140,6 +140,36 @@ class SheetzCard extends LitElement {
     super();
     this.header = 'My app';
   }
+  changeTitle(){
+    document.querySelector('sheetz-card').shadowRoot.querySelector('#title').addEventListener('click', (e) => {
+    const headings = document.querySelector('sheetz-card').shadowRoot.querySelectorAll('.sheetzLbl'); // Corrected class name
+    headings.forEach((heading) => {
+    heading.textContent = "something else";
+    });
+    });
+    }
+    
+  dupeCard(){
+    document.querySelector('sheetz-card').shadowRoot.querySelector('#duper').addEventListener('click', (e) => {
+      const cardContainer = document.querySelector('sheetz-card').shadowRoot.querySelector('.card-container');
+      const cardWrapperClone = document.querySelector('sheetz-card').shadowRoot.querySelector('.card-wrapper').cloneNode(true);
+    
+      // Add unique classes to the cloned elements
+      cardWrapperClone.classList.add('cloned-card');
+      cardWrapperClone.querySelector('.toggle-details').textContent = 'Details';
+    
+      cardContainer.appendChild(cardWrapperClone);
+    
+      // Set up event listeners for the cloned button
+      const clonedToggleDetailsButton = cardWrapperClone.querySelector('.toggle-details');
+      const clonedParagraphsSection = cardWrapperClone.querySelector('.paragraphs');
+    
+      clonedToggleDetailsButton.addEventListener('click', () => {
+        clonedParagraphsSection.classList.toggle('hidden');
+      });
+    });
+    }
+
 
   render() {
     return html`
