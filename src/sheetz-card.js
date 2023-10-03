@@ -139,7 +139,6 @@ class SheetzCard extends LitElement {
   constructor() {
     super();
     this.header = 'My app';
-    this.detailsOpen = false;
   }
   dupeCard(){
     const cardContainer = document.querySelector('sheetz-card').shadowRoot.querySelector('.card-container');
@@ -183,12 +182,11 @@ class SheetzCard extends LitElement {
   detailsToggle(){
     // JavaScript to toggle visibility of the paragraph descriptions
 // const details = document.querySelector('sheetz-card').shadowRoot.querySelector('.toggle-details');
-/*const toggleDetailsButtons = document.querySelector('sheetz-card').shadowRoot.querySelector('.toggle-details');
+const toggleDetailsButtons = document.querySelector('sheetz-card').shadowRoot.querySelector('.toggle-details');
 const paragraphsSections = document.querySelector('sheetz-card').shadowRoot.querySelector('.paragraphs');
 toggleDetailsButtons.forEach((button, index) => {
   paragraphsSections[index].classList.toggle('hidden');
-});*/
-this.detailsOpen = !this.detailsOpen; 
+});
 }
   render() {
     return html`
@@ -218,8 +216,7 @@ this.detailsOpen = !this.detailsOpen;
                   <img src="https://gofericecream.com/wp-content/uploads/2021/06/shake-.png">
                 </div>
                   <div class="detailsBtn">
-                    <button class="detailsBtn" @click="${this.detailsToggle}">
-                    ${this.detailsOpen ? 'Hide Details' : 'Show Details'}Details</button>
+                    <button class="detailsBtn" @click="${this.detailsToggle}">Details</button>
                   </div>
                     <div class="paragraphs">
                       <p>$1.99 <br>A food consisting of a grilled or steamed sausage served in the slit of a partially sliced bun. </p>
