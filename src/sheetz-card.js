@@ -161,7 +161,7 @@ toggleDetailsButtons.forEach((button, index) => {
   paragraphsSections[index].classList.toggle('hidden');
 });
 })
-}
+}*/
   deleteCard(){
    
   // Code for deleting the last card
