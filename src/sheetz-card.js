@@ -176,8 +176,10 @@ class SheetzCard extends LitElement {
   });
   }
   changeTitle(){
-    const cardTitle = this.shadowRoot.querySelector('#title');
-    cardTitle.textContent = 'something else';
+      const headings = document.querySelector('sheetz-card').shadowRoot.querySelectorAll('.sheetzLbl'); // Corrected class name
+      headings.forEach((heading) => {
+      heading.textContent = "something else";
+      });
     }
     
   dupeCard(){
