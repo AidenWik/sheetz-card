@@ -157,7 +157,7 @@ class SheetzCard extends LitElement {
     const clonedToggleDetailsButton = cardWrapperClone.querySelector('.detailsBtn');
     const clonedParagraphsSection = cardWrapperClone.querySelector('.paragraphs');
   
-      clonedParagraphsSection.classList.toggle('hidden');
+      /*clonedParagraphsSection.classList.toggle('hidden');*/
   }
   deleteCard(){
     // Code for deleting the last card
