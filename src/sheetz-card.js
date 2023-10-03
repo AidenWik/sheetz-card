@@ -140,6 +140,15 @@ class SheetzCard extends LitElement {
     super();
     this.header = 'My app';
   }
+  changeBackground(){
+    document.querySelector('sheetz-card').shadowRoot.querySelector('#background').addEventListener('click', (e) => {
+      const cardWrappers = document.querySelector('sheetz-card').shadowRoot.querySelectorAll('.card-wrapper');
+      /* loop to change each existing iteration*/
+      cardWrappers.forEach((cardWrapper) => {
+        cardWrapper.classList.toggle('alt-bg');
+      });
+    });
+  }
   detailsToggle(){
     // JavaScript to toggle visibility of the paragraph descriptions
     document.querySelector('.toggle-details').addEventListener('click', (e) => {
@@ -237,7 +246,7 @@ class SheetzCard extends LitElement {
     <button id="duper" @click="${this.dupeCard}">Button for duplication</button>
   </div>
   <div class="background">
-    <button id="background">Change Background</button>
+    <button id="background" @click="${this.changeBackground}>Change Background</button>
   </div>
   <div class="title">
     <button id="title" @click="${this.changeTitle}">Change Title</button>
@@ -341,7 +350,7 @@ heading.textContent = "something else";
 });
 });
 }
-
+changeBackground(){
 document.querySelector('sheetz-card').shadowRoot.querySelector('#background').addEventListener('click', (e) => {
 const cardWrappers = document.querySelector('sheetz-card').shadowRoot.querySelectorAll('.card-wrapper');
 /* loop to change each existing iteration*/
@@ -349,6 +358,7 @@ cardWrappers.forEach((cardWrapper) => {
 cardWrapper.classList.toggle('alt-bg');
 });
 });
+}
       </script>
    
      </body>
