@@ -142,7 +142,7 @@ class SheetzCard extends LitElement {
   }
   changeBackground(){
     document.querySelector('sheetz-card').shadowRoot.querySelector('#background').addEventListener('click', (e) => {
-      const cardWrappers = document.querySelector('sheetz-card').shadowRoot.querySelectorAll('.card-wrapper');
+      const cardWrappers = document.querySelector('sheetz-card').shadowRoot.querySelector('.card-wrapper');
       /* loop to change each existing iteration*/
       cardWrappers.forEach((cardWrapper) => {
         cardWrapper.classList.toggle('alt-bg');
@@ -175,12 +175,8 @@ class SheetzCard extends LitElement {
   });
   }
   changeTitle(){
-    document.querySelector('sheetz-card').shadowRoot.querySelector('#title').addEventListener('click', (e) => {
-    const headings = document.querySelector('sheetz-card').shadowRoot.querySelectorAll('.sheetzLbl'); // Corrected class name
-    headings.forEach((heading) => {
-    heading.textContent = "something else";
-    });
-    });
+    const cardTitle = this.shadowRoot.querySelector('.card-title');
+    cardTitle.textContent = 'something else';
     }
     
   dupeCard(){
