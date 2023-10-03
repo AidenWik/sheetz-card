@@ -173,14 +173,14 @@ class SheetzCard extends LitElement {
         });
     }
   
-  changeBackground(){
-      const cardWrappers = document.querySelector('sheetz-card').shadowRoot.querySelector('.card-wrapper');
-      // loop to change each existing iteration
-
-        cardWrapper.classList.toggle('alt-bg');
-
-
-  }
+    changeBackground(){
+      const cardWrappers = document.querySelector('sheetz-card').shadowRoot.querySelectorAll('.card-wrapper');
+      const cardWrapper = ocument.querySelector('sheetz-card').shadowRoot.querySelector('.card-wrapper');
+      /* loop to change each existing iteration*/
+      cardWrappers.forEach((cardWrapper) => {
+      cardWrapper.classList.toggle('alt-bg');
+      });
+      }
   /*detailsToggle(){
     // JavaScript to toggle visibility of the paragraph descriptions
 document.querySelector('.toggle-details').addEventListener('click', (e) => {
@@ -345,6 +345,8 @@ cardTitle.textContent = 'something else';
 changeBackground(){
 document.querySelector('sheetz-card').shadowRoot.querySelector('#background').addEventListener('click', (e) => {
 const cardWrappers = document.querySelector('sheetz-card').shadowRoot.querySelectorAll('.card-wrapper');
+const cardWrapper = document.querySelector(sheetz-card).shadowRoot.querySelectorAll('.card-wrapper');
+cardWrapper.classList.toggle('alt-bg2');
 /* loop to change each existing iteration*/
 cardWrappers.forEach((cardWrapper) => {
 cardWrapper.classList.toggle('alt-bg');
