@@ -163,17 +163,15 @@ class SheetzCard extends LitElement {
     })
   }
   deleteCard(){
-    document.querySelector('sheetz-card').shadowRoot.querySelector('#deleteLastCard').addEventListener('click', (e) => {
+   
   // Code for deleting the last card
   const cardContainer = document.querySelector('sheetz-card').shadowRoot.querySelector('.card-container');
   const cardWrappers = document.querySelector('sheetz-card').shadowRoot.querySelectorAll('.card-wrapper');
-  
   // Check if there's at least one card to delete
   if (cardWrappers.length > 1) {
     const lastCard = cardWrappers[cardWrappers.length - 1];
     cardContainer.removeChild(lastCard);
   }
-  });
   }
   changeTitle(){
       const headings = document.querySelector('sheetz-card').shadowRoot.querySelectorAll('.sheetzLbl'); // Corrected class name
