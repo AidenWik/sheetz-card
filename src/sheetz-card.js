@@ -185,9 +185,7 @@ class SheetzCard extends LitElement {
 const toggleDetailsButtons = document.querySelector('sheetz-card').shadowRoot.querySelector('.toggle-details');
 const paragraphsSections = document.querySelector('sheetz-card').shadowRoot.querySelector('.paragraphs');
 console.log(paragraphsSections);
-toggleDetailsButtons.forEach((button, index) => {
   paragraphsSections[index].classList.toggle('hidden');
-});
 }
   render() {
     return html`
