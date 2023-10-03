@@ -179,20 +179,20 @@ class SheetzCard extends LitElement {
       cardWrappers.forEach((cardWrapper) => {
         cardWrapper.classList.toggle('alt-bg');
       });
+
   }
-  detailsToggle(){
-    const desc = document.querySelector('sheetz-card').shadowRoot.querySelector('detailsBtn');
-    desc.classList.toggle('hidden');
+  /*detailsToggle(){
     // JavaScript to toggle visibility of the paragraph descriptions
-/*
+document.querySelector('.toggle-details').addEventListener('click', (e) => {
 // const details = document.querySelector('sheetz-card').shadowRoot.querySelector('.toggle-details');
 const toggleDetailsButtons = document.querySelector('sheetz-card').shadowRoot.querySelector('.toggle-details');
 const paragraphsSections = document.querySelector('sheetz-card').shadowRoot.querySelector('.paragraphs');
+console.log(details);
 toggleDetailsButtons.forEach((button, index) => {
   paragraphsSections[index].classList.toggle('hidden');
 });
-*/
-}
+})
+}*/
   render() {
     return html`
     <head>
@@ -221,8 +221,7 @@ toggleDetailsButtons.forEach((button, index) => {
                   <img src="https://gofericecream.com/wp-content/uploads/2021/06/shake-.png">
                 </div>
                   <div class="detailsBtn">
-                    <button class="detailsBtn" <slot></slot>${this.detailsBtn}</div>
-                <div class="toggle-button" @click="${this.detailsToggle}">Details</div>
+                    <button class="detailsBtn" @click="${this.detailsToggle}">Details</button>
                   </div>
                     <div class="paragraphs">
                       <p>$1.99 <br>A food consisting of a grilled or steamed sausage served in the slit of a partially sliced bun. </p>
