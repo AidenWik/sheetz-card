@@ -18,6 +18,10 @@ class SheetzCard extends LitElement {
   position: relative;
   margin-bottom: 200px;
 }
+.card-wrapper:hover {
+  background-color: lightblue;
+  transition: background-color 0.3s;
+}
 
 .card-wrapper img {
   width: 100%; /* Set the width of the image to 100% to fit the card width */
