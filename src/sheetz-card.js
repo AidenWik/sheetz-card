@@ -176,7 +176,7 @@ class SheetzCard extends LitElement {
   });
   }
   changeTitle(){
-    const cardTitle = this.shadowRoot.querySelector('.card-title');
+    const cardTitle = this.shadowRoot.querySelector('#title');
     cardTitle.textContent = 'something else';
     }
     
