@@ -160,17 +160,20 @@ class SheetzCard extends LitElement {
 }
 */ 
     const cardContainer = document.querySelector('sheetz-card').shadowRoot.querySelector('.card-container');
-    const lone = cardContainer[0].cloneNode(true);
+    const clone = cardContainer[0].cloneNode(true);
   
     // Add unique classes to the cloned elements
-    
+    clone.querySelector('detailsBtn').classList.remove('hidden');
+  this.shadowRoot.querySelector('.card-wrapper').appendChild(clone);
     clone.classList.add('cloned-card');
   
-    cardContainer.appendChild(clone);
+    //cardContainer.appendChild(clone);
     // Set up event listeners for the cloned button
     const clonedToggleDetailsButton = clone.querySelector('.detailsBtn');
     const clonedParagraphsSection = clone.querySelector('.paragraphs');
-  
+    clonedToggleDetailsButton.addEventListener('click', () => {
+      clonedParagraphsSection.classList.toggle('hidden');
+    });
      //clonedParagraphsSection.classList.toggle('hidden');
   }
   deleteCard(){
