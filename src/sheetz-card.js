@@ -179,7 +179,7 @@ class SheetzCard extends LitElement {
           </div>
         </div>
   <div class="duper">
-    <button id="duper">Button for duplication</button>
+    <button id="duper" @click="$(this.dupeCard)">Button for duplication</button>
   </div>
   <div class="background">
     <button id="background">Change Background</button>
@@ -222,6 +222,7 @@ const paragraphsSections = document.querySelector('sheetz-card').shadowRoot.quer
 });*/
 
 // JavaScript for cloning cards
+dupeCard(){
 document.querySelector('sheetz-card').shadowRoot.querySelector('#duper').addEventListener('click', (e) => {
   const cardContainer = document.querySelector('sheetz-card').shadowRoot.querySelector('.card-container');
   const cardWrapperClone = document.querySelector('sheetz-card').shadowRoot.querySelector('.card-wrapper').cloneNode(true);
@@ -240,6 +241,7 @@ document.querySelector('sheetz-card').shadowRoot.querySelector('#duper').addEven
     clonedParagraphsSection.classList.toggle('hidden');
   });
 });
+}
 document.querySelector('#deleteLastCard').addEventListener('click', (e) => {
 // Code for deleting the last card
 const cardContainer = document.querySelector('sheetz-card').shadowRoot.querySelector('.card-container');
@@ -256,11 +258,18 @@ document.querySelector('sheetz-card').shadowRoot.querySelector('.card-wrapper').
 const cardWrapper = document.querySelector(sheetz-card).shadowRoot.querySelectorAll('.card-wrapper');
 cardWrapper.classList.toggle('alt-bg2');
 });*/
+
 //Chat gpt fix
 document.querySelector('sheetz-card').shadowRoot.querySelector('.card-wrapper').addEventListener('mouseover', (e) => {
   const cardWrapper = e.target; // Use the event target
   cardWrapper.classList.toggle('alt-bg2');
 });
+//Chat GPT fix 
+document.querySelector('sheetz-card').shadowRoot.querySelector('.card-wrapper').addEventListener('mouseleave', (e) => {
+  const cardWrapper = e.target; // Use the event target
+  cardWrapper.classList.toggle('alt-bg2');
+});
+
 /*
 document.querySelector('sheetz-card').shadowRoot.querySelector('.card-wrapper').addEventListener('mouseleave', (e) => {
 const cardWrapper = document.querySelector('sheetz-card').shadowRoot.querySelectorAll('.card-wrapper');
@@ -275,13 +284,6 @@ heading.textContent = "something else";
 });
 });
 }
-//Chat GPT fix 
-document.querySelector('sheetz-card').shadowRoot.querySelector('.card-wrapper').addEventListener('mouseleave', (e) => {
-  const cardWrapper = e.target; // Use the event target
-  cardWrapper.classList.toggle('alt-bg2');
-});
-
-
 
 document.querySelector('sheetz-card').shadowRoot.querySelector('#background').addEventListener('click', (e) => {
 const cardWrappers = document.querySelector('sheetz-card').shadowRoot.querySelectorAll('.card-wrapper');
