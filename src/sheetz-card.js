@@ -264,18 +264,18 @@ document.querySelector('sheetz-card').shadowRoot.querySelector('.card-wrapper').
   const cardWrapper = e.target; // Use the event target
   cardWrapper.classList.toggle('alt-bg2');
 });
-
+/*
 document.querySelector('sheetz-card').shadowRoot.querySelector('.card-wrapper').addEventListener('mouseleave', (e) => {
 const cardWrapper = document.querySelector('sheetz-card').shadowRoot.querySelectorAll('.card-wrapper');
 cardWrapper.classList.toggle('alt-bg2');
 });
-/*
+*/
 document.querySelector('sheetz-card').shadowRoot.querySelector('#title').addEventListener('click', (e) => {
 const headings = document.querySelector('sheetz-card').shadowRoot.querySelectorAll('.sheetzLbl'); // Corrected class name
 headings.forEach((heading) => {
 heading.textContent = "something else";
 });
-});*/
+});
 //Chat GPT fix 
 document.querySelector('sheetz-card').shadowRoot.querySelector('.card-wrapper').addEventListener('mouseleave', (e) => {
   const cardWrapper = e.target; // Use the event target
