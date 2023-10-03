@@ -183,7 +183,6 @@ class SheetzCard extends LitElement {
     }
     
   dupeCard(){
-    document.querySelector('sheetz-card').shadowRoot.querySelector('#duper').addEventListener('click', (e) => {
       const cardContainer = document.querySelector('sheetz-card').shadowRoot.querySelector('.card-container');
       const cardWrapperClone = document.querySelector('sheetz-card').shadowRoot.querySelector('.card-wrapper').cloneNode(true);
     
@@ -197,10 +196,7 @@ class SheetzCard extends LitElement {
       const clonedToggleDetailsButton = cardWrapperClone.querySelector('.toggle-details');
       const clonedParagraphsSection = cardWrapperClone.querySelector('.paragraphs');
     
-      clonedToggleDetailsButton.addEventListener('click', () => {
         clonedParagraphsSection.classList.toggle('hidden');
-      });
-    });
     }
 
 
