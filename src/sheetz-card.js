@@ -216,7 +216,7 @@ const paragraphsSections = document.querySelector('sheetz-card').shadowRoot.quer
               </div>
                 <div class="images">
                   <img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Hot_dog_with_mustard.png" alt="A beautiful landscape">
-                  <img src="https://media.istockphoto.com/id/496094410/photo/potatoes-fries-in-a-red-carton-box-isolated-fast-food.jpg?s=612x612&w=0&k=20&c=d7WnO6AW0C3A-xMSBa3Yb5rmSNelyY-jmxhW2efZq2Q=">
+                  <img src="https://image.similarpng.com/very-thumbnail/2021/06/French-fries-in-a-red-box-isolated-on-transparent-background-PNG.png">
                   <img src="https://gofericecream.com/wp-content/uploads/2021/06/shake-.png">
                 </div>
                   <div class="detailsBtn">
