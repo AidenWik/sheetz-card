@@ -190,9 +190,9 @@ const toggleDetailsButtons = document.querySelector('sheetz-card').shadowRoot.qu
 const paragraphsSections = document.querySelector('sheetz-card').shadowRoot.querySelectorAll('.paragraphs');
 console.log(toggleDetailsButtons);
 console.log(paragraphsSections);
-  toggleDetailsButtons.forEach((index) => {
-    paragraphsSections[index].classList.toggle('hidden');
-  });
+  
+    paragraphsSections.classList.toggle('hidden');
+
 }
   render() {
     return html`
