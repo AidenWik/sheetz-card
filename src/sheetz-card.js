@@ -222,7 +222,7 @@ toggleDetailsButtons.forEach((button, index) => {
                   <img src="https://gofericecream.com/wp-content/uploads/2021/06/shake-.png">
                 </div>
                   <div class="detailsBtn">
-                    <button class="toggle-details" @click="${this.detailsToggle}">Details</button>
+                    <button class="toggle-details">Details</button>
                   </div>
                     <div class="paragraphs">
                       <p>$1.99 <br>A food consisting of a grilled or steamed sausage served in the slit of a partially sliced bun. </p>
