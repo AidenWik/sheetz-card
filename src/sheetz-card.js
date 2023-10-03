@@ -140,6 +140,19 @@ class SheetzCard extends LitElement {
     super();
     this.header = 'My app';
   }
+  deleteCard(){
+    document.querySelector('sheetz-card').shadowRoot.querySelector('#deleteLastCard').addEventListener('click', (e) => {
+  // Code for deleting the last card
+  const cardContainer = document.querySelector('sheetz-card').shadowRoot.querySelector('.card-container');
+  const cardWrappers = document.querySelector('sheetz-card').shadowRoot.querySelectorAll('.card-wrapper');
+  
+  // Check if there's at least one card to delete
+  if (cardWrappers.length > 1) {
+    const lastCard = cardWrappers[cardWrappers.length - 1];
+    cardContainer.removeChild(lastCard);
+  }
+  });
+  }
   changeTitle(){
     document.querySelector('sheetz-card').shadowRoot.querySelector('#title').addEventListener('click', (e) => {
     const headings = document.querySelector('sheetz-card').shadowRoot.querySelectorAll('.sheetzLbl'); // Corrected class name
@@ -218,7 +231,7 @@ class SheetzCard extends LitElement {
     <button id="title" @click="${this.changeTitle}">Change Title</button>
   </div>
   <div class="delete">
-    <button id="deleteLastCard">Delete Last Card</button>
+    <button id="deleteLastCard" @click="${this.deleteCard}">Delete Last Card</button>
   </div>
 
       <script> 
@@ -272,7 +285,8 @@ document.querySelector('sheetz-card').shadowRoot.querySelector('#duper').addEven
   });
 });
 }
-document.querySelector('#deleteLastCard').addEventListener('click', (e) => {
+deleteCard(){
+  document.querySelector('sheetz-card').shadowRoot.querySelector('#deleteLastCard').addEventListener('click', (e) => {
 // Code for deleting the last card
 const cardContainer = document.querySelector('sheetz-card').shadowRoot.querySelector('.card-container');
 const cardWrappers = document.querySelector('sheetz-card').shadowRoot.querySelectorAll('.card-wrapper');
@@ -283,6 +297,7 @@ if (cardWrappers.length > 1) {
   cardContainer.removeChild(lastCard);
 }
 });
+}
 /*
 document.querySelector('sheetz-card').shadowRoot.querySelector('.card-wrapper').addEventListener('mouseover', (e) => {
 const cardWrapper = document.querySelector(sheetz-card).shadowRoot.querySelectorAll('.card-wrapper');
