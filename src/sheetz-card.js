@@ -180,18 +180,15 @@ class SheetzCard extends LitElement {
       cardWrapper.classList.toggle('alt-bg');
       });
       }
-  /*detailsToggle(){
+  detailsToggle(){
     // JavaScript to toggle visibility of the paragraph descriptions
-document.querySelector('.toggle-details').addEventListener('click', (e) => {
 // const details = document.querySelector('sheetz-card').shadowRoot.querySelector('.toggle-details');
 const toggleDetailsButtons = document.querySelector('sheetz-card').shadowRoot.querySelector('.toggle-details');
 const paragraphsSections = document.querySelector('sheetz-card').shadowRoot.querySelector('.paragraphs');
-console.log(details);
 toggleDetailsButtons.forEach((button, index) => {
   paragraphsSections[index].classList.toggle('hidden');
 });
-})
-}*/
+}
   render() {
     return html`
     <head>
