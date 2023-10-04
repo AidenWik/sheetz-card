@@ -172,7 +172,7 @@ class SheetzCard extends LitElement {
     //const clonedParagraphsSection = cardWrapperClone.querySelector('.paragraphs');
     
      //clonedParagraphsSection.classList.toggle('hidden');
-
+    /*
      const clonedToggleDetailsButton = cardWrapperClone.querySelector('.detailsBtn button');
 
      clonedToggleDetailsButton.addEventListener('click', () => {
@@ -180,7 +180,7 @@ class SheetzCard extends LitElement {
        const clonedParagraphsSection = cardWrapperClone.querySelector('.paragraphs');
        clonedParagraphsSection.classList.toggle('hidden');
      });
-   
+   */
   }
   deleteCard(){
     // Code for deleting the last card
