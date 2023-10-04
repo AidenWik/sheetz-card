@@ -168,10 +168,19 @@ class SheetzCard extends LitElement {
   
     cardContainer.appendChild(cardWrapperClone);
     // Set up event listeners for the cloned button
-    const clonedToggleDetailsButton = cardWrapperClone.querySelector('.detailsBtn');
-    const clonedParagraphsSection = cardWrapperClone.querySelector('.paragraphs');
-  
+    //const clonedToggleDetailsButton = cardWrapperClone.querySelector('.detailsBtn');
+    //const clonedParagraphsSection = cardWrapperClone.querySelector('.paragraphs');
+    
      //clonedParagraphsSection.classList.toggle('hidden');
+
+     const clonedToggleDetailsButton = cardWrapperClone.querySelector('.detailsBtn button');
+
+     clonedToggleDetailsButton.addEventListener('click', () => {
+       // Toggle the visibility of the paragraphs in the cloned card
+       const clonedParagraphsSection = cardWrapperClone.querySelector('.paragraphs');
+       clonedParagraphsSection.classList.toggle('hidden');
+     });
+   
   }
   deleteCard(){
     // Code for deleting the last card
