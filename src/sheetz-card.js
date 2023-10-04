@@ -164,9 +164,9 @@ class SheetzCard extends LitElement {
   
     // Add unique classes to the cloned elements
     
-    //cardWrapperClone.classList.add('cloned-card');
+    cardWrapperClone.classList.add('cloned-card');
   
-    cardContainer.appendChild(cardWrapperClone);
+    //cardContainer.appendChild(cardWrapperClone);
     // Set up event listeners for the cloned button
     //const clonedToggleDetailsButton = cardWrapperClone.querySelector('.detailsBtn');
     //const clonedParagraphsSection = cardWrapperClone.querySelector('.paragraphs');
