@@ -210,11 +210,11 @@ class SheetzCard extends LitElement {
     // JavaScript to toggle visibility of the paragraph descriptions
 // const details = document.querySelector('sheetz-card').shadowRoot.querySelector('.toggle-details');
 const toggleDetailsButtons = document.querySelector('sheetz-card').shadowRoot.querySelectorAll('.detailsBtn');
-//toggleDetailsButtons.forEach((button, index) => { 
+toggleDetailsButtons.forEach((button, index) => { 
   console.log(toggleDetailsButtons);
   const paragraphsSections = document.querySelector('sheetz-card').shadowRoot.querySelectorAll('.paragraphs');
   paragraphsSections.classList.toggle('hidden');
-  //});
+  });
 }
   render() {
     return html`
