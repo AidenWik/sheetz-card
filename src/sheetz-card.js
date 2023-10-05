@@ -207,17 +207,14 @@ class SheetzCard extends LitElement {
       });
       }
   detailsToggle(){
-    const toggleDetailsButtons = document.querySelector('sheetz-card').shadowRoot.querySelectorAll('.detailsBtn');
-    const clonedParagraphsSection = toggleDetailsButtons.querySelector('.paragraphs');
-       clonedParagraphsSection.classList.toggle('hidden');
     // JavaScript to toggle visibility of the paragraph descriptions
 // const details = document.querySelector('sheetz-card').shadowRoot.querySelector('.toggle-details');
-/*const toggleDetailsButtons = document.querySelector('sheetz-card').shadowRoot.querySelectorAll('.detailsBtn');
+const toggleDetailsButtons = document.querySelector('sheetz-card').shadowRoot.querySelectorAll('.detailsBtn');
 toggleDetailsButtons.forEach((button, index) => { 
   console.log(toggleDetailsButtons);
   const paragraphsSections = document.querySelector('sheetz-card').shadowRoot.querySelectorAll('.paragraphs');
   paragraphsSections[index].classList.toggle('hidden');
-  });*/
+  });
 }
   render() {
     return html`
