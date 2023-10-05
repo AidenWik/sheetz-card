@@ -212,7 +212,7 @@ class SheetzCard extends LitElement {
 const toggleDetailsButtons = document.querySelector('sheetz-card').shadowRoot.querySelector('.detailsBtn');
 toggleDetailsButtons.forEach((button, index) => { 
   console.log(toggleDetailsButtons);
-  const paragraphsSections = document.querySelector('sheetz-card').shadowRoot.querySelector('.paragraphs');
+  const paragraphsSections = document.querySelector('sheetz-card').shadowRoot.querySelectorAll('.paragraphs');
   paragraphsSections[index].classList.toggle('hidden');
   });
 }
