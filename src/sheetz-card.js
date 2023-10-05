@@ -213,7 +213,7 @@ const toggleDetailsButtons = document.querySelector('sheetz-card').shadowRoot.qu
 toggleDetailsButtons.forEach((button, index) => { 
   console.log(toggleDetailsButtons);
   const paragraphsSections = document.querySelector('sheetz-card').shadowRoot.querySelectorAll('.paragraphs');
-  paragraphsSections[1].classList.toggle('hidden');
+  paragraphsSections[index].classList.toggle('hidden');
   });
 }
   render() {
