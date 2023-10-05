@@ -209,27 +209,13 @@ class SheetzCard extends LitElement {
   detailsToggle(){
     // JavaScript to toggle visibility of the paragraph descriptions
 // const details = document.querySelector('sheetz-card').shadowRoot.querySelector('.toggle-details');
-/*const toggleDetailsButtons = document.querySelector('sheetz-card').shadowRoot.querySelectorAll('.detailsBtn');
-toggleDetailsButtons.forEach((button, index) => { 
+const toggleDetailsButtons = document.querySelector('sheetz-card').shadowRoot.querySelectorAll('.detailsBtn');
+//toggleDetailsButtons.forEach((button, index) => { 
   console.log(toggleDetailsButtons);
   const paragraphsSections = document.querySelector('sheetz-card').shadowRoot.querySelectorAll('.paragraphs');
-  paragraphsSections[index].classList.toggle('hidden');
-  });*/
-  // Select the first sheetz-card element on the page
-  const firstSheetzCard = document.querySelector('sheetz-card');
-
-  // Check if a sheetz-card element exists on the page
-  if (firstSheetzCard) {
-    // Find all the details buttons within the first sheetz-card element
-    const toggleDetailsButtons = firstSheetzCard.shadowRoot.querySelectorAll('.detailsBtn');
-
-    // Loop through the details buttons and toggle the visibility of corresponding paragraphs
-    toggleDetailsButtons.forEach((button, index) => {
-      const paragraphsSections = firstSheetzCard.shadowRoot.querySelectorAll('.paragraphs');
-      paragraphsSections[index].classList.toggle('hidden');
-    });
+  paragraphsSections.classList.toggle('hidden');
+  //});
 }
-  }
   render() {
     return html`
     <head>
