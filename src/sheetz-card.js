@@ -144,7 +144,6 @@ class SheetzCard extends LitElement {
     super();
     this.header = 'My app';
   }
-  /*
   dupeCard(){
     //BTOPROS DUPE CARD
     /*duplicateCard() {
@@ -159,7 +158,7 @@ class SheetzCard extends LitElement {
     cardDescription.classList.toggle('hidden');
   });
 }
-
+*/ 
     const cardContainer = document.querySelector('sheetz-card').shadowRoot.querySelector('.card-container');
     const cardWrapperClone = document.querySelector('sheetz-card').shadowRoot.querySelector('.card-wrapper').cloneNode(true);
   
@@ -202,7 +201,7 @@ class SheetzCard extends LitElement {
   
     changeBackground(){
       const cardWrappers = document.querySelector('sheetz-card').shadowRoot.querySelectorAll('.card-wrapper');
-      /* loop to change each existing iteration
+      /* loop to change each existing iteration*/
       cardWrappers.forEach((cardWrapper) => {
       cardWrapper.classList.toggle('alt-bg');
       });
@@ -216,7 +215,7 @@ toggleDetailsButtons.forEach((button, index) => {
   const paragraphsSections = document.querySelector('sheetz-card').shadowRoot.querySelectorAll('.paragraphs');
   paragraphsSections[index].classList.toggle('hidden');
   });
-}*/
+}
   render() {
     return html`
     <head>
